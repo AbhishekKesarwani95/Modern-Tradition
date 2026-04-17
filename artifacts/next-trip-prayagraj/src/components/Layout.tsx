@@ -46,9 +46,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <span>info@nexttripprayagraj.com</span>
             </a>
           </div>
-          <div className="flex items-center gap-4">
-            <div id="google_translate_element" className="h-6 overflow-hidden [&_.goog-te-gadget-simple]:bg-transparent [&_.goog-te-gadget-simple]:border-none [&_.goog-te-gadget-simple]:text-white [&_.goog-te-gadget-simple_span]:text-white [&_.goog-te-menu-value_span]:text-white"></div>
-          </div>
+          <div className="flex items-center gap-4"></div>
         </div>
       </div>
 
@@ -110,7 +108,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         {mobileMenuOpen && (
           <div className="md:hidden absolute top-full left-0 w-full bg-background border-b border-border shadow-lg animate-in slide-in-from-top-2">
             <div className="container mx-auto px-4 py-6 flex flex-col gap-4">
-              <div id="google_translate_element_mobile" className="mb-4"></div>
               {navLinks.map((link) => (
                 <Link 
                   key={link.name}
