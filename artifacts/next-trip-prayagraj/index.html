@@ -54,6 +54,10 @@
           document.cookie = 'googtrans=' + value + '; path=/; domain=' + location.hostname;
         }
 
+        if (localStorage.getItem('ntp_lang_pref') === 'en') {
+          return;
+        }
+
         var existing = getCookie('googtrans');
         if (!existing || existing === '/en/en' || existing === '/auto/en') {
           var browserLangs = (navigator.languages && navigator.languages.length)

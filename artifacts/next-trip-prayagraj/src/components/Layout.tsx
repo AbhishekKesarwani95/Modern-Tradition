@@ -92,6 +92,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             {isTranslated ? (
               <button
                 onClick={() => {
+                  localStorage.setItem('ntp_lang_pref', 'en');
                   document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/';
                   document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=' + window.location.hostname;
                   window.location.reload();
@@ -103,7 +104,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               </button>
             ) : localLang ? (
               <button
-                onClick={() => { setGoogTransCookie(localLang.code); window.location.reload(); }}
+                onClick={() => { localStorage.removeItem('ntp_lang_pref'); setGoogTransCookie(localLang.code); window.location.reload(); }}
                 className="flex items-center gap-1.5 text-xs text-white/90 hover:text-white border border-white/30 hover:border-white/70 rounded-full px-3 py-1 transition-all"
               >
                 <Globe size={12} />
@@ -175,6 +176,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               {isTranslated ? (
                 <button
                   onClick={() => {
+                    localStorage.setItem('ntp_lang_pref', 'en');
                     document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/';
                     document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=' + window.location.hostname;
                     window.location.reload();
@@ -186,7 +188,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 </button>
               ) : localLang ? (
                 <button
-                  onClick={() => { setGoogTransCookie(localLang.code); window.location.reload(); }}
+                  onClick={() => { localStorage.removeItem('ntp_lang_pref'); setGoogTransCookie(localLang.code); window.location.reload(); }}
                   className="flex items-center gap-2 text-sm font-medium text-primary border border-primary/30 hover:border-primary rounded-full px-4 py-2 w-fit transition-all"
                 >
                   <Globe size={14} />
