@@ -1,0 +1,24 @@
+I want a website that will look modern with tradional of prayagraj. Whenever anyone visits in website it automatically takes the user location without concern or check whatver way but
+need his location for local language coversion of website using the google translate. Need a 5-6 pages of website that can have home, about us,packages, contact or enquiry, faq, etc page.
+The website should be fully functional. At top of the page there will be header includes the mobile no. or whatsapp for booking. The website name should be Next trip prayagraj.
+The website should be fully accessible through keyboard, also seo should be there for better reachability,
+Whenver user fills the form on submit it should go to whatsapp.
+I want this website in react, also it should look beautiful with proper color alignments and visuals. I have around 10 images. Also add carousel of images at home page. Also let me know how can I deploy this project with proper access
+Below is all about the packages which we offer , there will be button with name can book this on click it should redirect to whatsapp.
+1. Heritage + Spiritual Package  “Discover Prayagraj: The Sacred Sangam”  Experience the soul of India where the Ganga, Yamuna, and the mystical Saraswati meet. This 2N/3D package covers Triveni Sangam aarti, Shri Bade Hanuman Ji, 3 Shakti Peeth temples, Shri Nagvasuki Mandir, Shri Veni Madhav, Anand Bhavan, Akbar Fort and Allahabad Museum. Includes a guided boat ride at sunrise, top-rated AC stay, private cab, local veg meals, and an evening cultural walk at Chowk. Perfect for families and pilgrims seeking faith, history, and peace in one trip.
+2. Short Getaway Package  “Prayagraj in 24 Hours”  Short on time, big on experience. Cover Sangam snan, Bade Hanuman Ji darshan, Shri Nagvasuki Mandir, Shri Veni Madhav, Anand Bhavan, and Company Bagh in a crisp 1N/1D plan. Includes AC stay, taxi, and a local food trail — from dahi-jalebi at Loknath and kachori-sabzi at Rambhawan to Banarasi paan. Ideal for weekenders and backpackers.
+3. Kumbh / Mela Special Package  “Mahakumbh Prayagraj: Once in a Lifetime”  Be part of the world’s largest spiritual gathering. Our Kumbh package gives you tented accommodation near Sangam, priority bathing slots on Shahi Snan dates, guided walks, 24x7 medical and security support, and sattvik meals. Add-ons: Naga sadhu akhada darshan, cultural evenings, and photo permit assistance. Limited seats — book early.
+4. History + Food Trail Package  “Allahabad: Freedom, Forts & Flavours”  Walk the lanes that shaped India’s freedom story. 1N/1D plan with Anand Bhavan, Swaraj Bhavan, Khusro Bagh, Allahabad Fort exterior, and University of Allahabad. Evenings are reserved for food: kachori-sabzi at Loknath, chaat at Civil Lines, and sweets at Sulaki. AC hotel, AC cab, and a storyteller guide included.
+5. Accommodation + Food Package  “Sacred Stays & Sattvik Meals – Designed for Your Yatra”  AC & non-AC stays with pure-veg sattvik food. Options near Sangam for early snan, family rooms. Meals include local thali, and 4 AM tea service. Verified for cleanliness, safety, and spiritual atmosphere.
+---
+
+Below is the details of overall about website:
+
+"Next Trip Prayagraj" (Triveni Sangam) – Where Your Stay Becomes Part of Your Sadhana  
+In Prayagraj, accommodation isn’t just a room. It’s how close you are to the 4 AM temple bells. It’s whether you can see Sangam from your window. It’s whether your meals are sattvik and your mornings begin with Ganga aarti, not traffic.  
+We’re a Prayagraj-based tours & stays agency built for yatris and tourists (B2B & B2C). We offer:
+Sacred Stays: Handpicked, top-rated hotels near the ghats, AC guest houses in Daraganj, Arail, and Baluaghat for early snan, quiet family hotels in Civil Lines, and authentic Kumbh tents with attached baths. Every property is verified for cleanliness, safety, and spiritual atmosphere.  
+Seamless Yatra: Triveni Sangam snan, private boats at sunrise, trusted pandas for puja, Shri Bade Hanuman Ji darshan, 3 Shakti Peeth temples, and guides who explain the why behind each ritual.  
+You focus on your darshan. We’ll handle your stay, your meals, and your peace of mind.  
+✓ 5 min to Sangam options  ✓ Pure-veg, sattvik meals on request  ✓ Senior citizen & NRI assistance  ✓ Kumbh 2026 authorized tent bookings  
+“Atithi Devo Bhava” isn’t our tagline. It’s our tradition.

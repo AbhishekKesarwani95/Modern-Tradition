@@ -1,0 +1,50 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "M9i1AEjx5axfSAsWIcWQY"
+uri = "file://artifacts/next-trip-prayagraj/public/images/triveni-sangam-dawn.png"
+type = "image"
+title = "Triveni Sangam at dawn"
+
+[[generated]]
+id = "UF1EH5MGRmPss-0bkM2oP"
+uri = "file://artifacts/next-trip-prayagraj/public/images/kumbh-mela-diyas.png"
+type = "image"
+title = "Kumbh Mela crowd with diyas"
+
+[[generated]]
+id = "QjcOZ8WkT2x-z4sctmImQ"
+uri = "file://artifacts/next-trip-prayagraj/public/images/bade-hanuman-temple.png"
+type = "image"
+title = "Bade Hanuman Ji temple"
+
+[[generated]]
+id = "rDI_L5hjg8__Ec7OQZlL8"
+uri = "file://artifacts/next-trip-prayagraj/public/images/anand-bhavan.png"
+type = "image"
+title = "Anand Bhavan heritage building"
+
+[[generated]]
+id = "KdCRQILp5SmIJpynjgMqo"
+uri = "file://artifacts/next-trip-prayagraj/public/images/ganga-aarti-night.png"
+type = "image"
+title = "Ganga Aarti ceremony at night"
+
+[[generated]]
+id = "rJ4y-UqohZl7CeKW2Xwy-"
+uri = "file://artifacts/next-trip-prayagraj/public/images/prayagraj-ghats-sunset.png"
+type = "image"
+title = "Prayagraj ghats at golden sunset"
+
+[[generated]]
+id = "kwt_Uxh6BgYRhu9U_qSlR"
+uri = "file://artifacts/next-trip-prayagraj/public/images/sattvik-thali.png"
+type = "image"
+title = "Traditional Indian thali sattvik meal"
+
+[[generated]]
+id = "aCCHDHod3oi_GJB99y7xn"
+uri = "file://artifacts/next-trip-prayagraj/public/images/sacred-boat-ride.png"
+type = "image"
+title = "Sacred boat ride on holy Ganga"

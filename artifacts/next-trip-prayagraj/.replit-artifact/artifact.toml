@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Next Trip Prayagraj"
+version = "1.0.0"
+id = "artifacts/next-trip-prayagraj"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 23550
+
+[services.development]
+run = "pnpm --filter @workspace/next-trip-prayagraj run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/next-trip-prayagraj", "run", "build" ]
+publicDir = "artifacts/next-trip-prayagraj/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "23550"
+BASE_PATH = "/"
