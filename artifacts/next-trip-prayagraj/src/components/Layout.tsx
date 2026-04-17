@@ -10,22 +10,46 @@ function getGoogTransCookie() {
   return match ? decodeURIComponent(match[2]) : null;
 }
 
-function switchToEnglish() {
-  document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/';
-  document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=' + window.location.hostname;
-  window.location.reload();
+function setGoogTransCookie(lang: string) {
+  const value = '/en/' + lang;
+  document.cookie = 'googtrans=' + value + '; path=/';
+  document.cookie = 'googtrans=' + value + '; path=/; domain=' + window.location.hostname;
+}
+
+function getBrowserLang(): string | null {
+  const langs = navigator.languages?.length ? navigator.languages : [navigator.language];
+  for (const l of langs) {
+    const code = l.toLowerCase().split('-')[0];
+    if (code && code !== 'en') return code;
+  }
+  return null;
+}
+
+function getLangNativeName(code: string): string {
+  try {
+    const display = new Intl.DisplayNames([code], { type: 'language' });
+    const name = display.of(code);
+    if (name && name !== code) return name.charAt(0).toUpperCase() + name.slice(1);
+  } catch {}
+  return code.toUpperCase();
 }
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isTranslated, setIsTranslated] = useState(false);
+  const [localLang, setLocalLang] = useState<{ code: string; name: string } | null>(null);
   const [location] = useLocation();
 
   useEffect(() => {
     const cookie = getGoogTransCookie();
     const translated = !!cookie && cookie !== '/en/en' && cookie !== '/auto/en';
     setIsTranslated(translated);
+
+    const code = getBrowserLang();
+    if (code) {
+      setLocalLang({ code, name: getLangNativeName(code) });
+    }
   }, []);
 
   useEffect(() => {
@@ -65,15 +89,27 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             </a>
           </div>
           <div className="flex items-center gap-4">
-            {isTranslated && (
+            {isTranslated ? (
               <button
-                onClick={switchToEnglish}
+                onClick={() => {
+                  document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/';
+                  document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=' + window.location.hostname;
+                  window.location.reload();
+                }}
                 className="flex items-center gap-1.5 text-xs text-white/90 hover:text-white border border-white/30 hover:border-white/70 rounded-full px-3 py-1 transition-all"
               >
                 <Globe size={12} />
                 <span>View in English</span>
               </button>
-            )}
+            ) : localLang ? (
+              <button
+                onClick={() => { setGoogTransCookie(localLang.code); window.location.reload(); }}
+                className="flex items-center gap-1.5 text-xs text-white/90 hover:text-white border border-white/30 hover:border-white/70 rounded-full px-3 py-1 transition-all"
+              >
+                <Globe size={12} />
+                <span>{localLang.name}</span>
+              </button>
+            ) : null}
           </div>
         </div>
       </div>
@@ -136,15 +172,27 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         {mobileMenuOpen && (
           <div className="md:hidden absolute top-full left-0 w-full bg-background border-b border-border shadow-lg animate-in slide-in-from-top-2">
             <div className="container mx-auto px-4 py-6 flex flex-col gap-4">
-              {isTranslated && (
+              {isTranslated ? (
                 <button
-                  onClick={switchToEnglish}
+                  onClick={() => {
+                    document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/';
+                    document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=' + window.location.hostname;
+                    window.location.reload();
+                  }}
                   className="flex items-center gap-2 text-sm font-medium text-primary border border-primary/30 hover:border-primary rounded-full px-4 py-2 w-fit transition-all"
                 >
                   <Globe size={14} />
                   <span>View in English</span>
                 </button>
-              )}
+              ) : localLang ? (
+                <button
+                  onClick={() => { setGoogTransCookie(localLang.code); window.location.reload(); }}
+                  className="flex items-center gap-2 text-sm font-medium text-primary border border-primary/30 hover:border-primary rounded-full px-4 py-2 w-fit transition-all"
+                >
+                  <Globe size={14} />
+                  <span>{localLang.name}</span>
+                </button>
+              ) : null}
               {navLinks.map((link) => (
                 <Link 
                   key={link.name}
