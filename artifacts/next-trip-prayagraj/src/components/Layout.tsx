@@ -1,14 +1,32 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'wouter';
-import { Phone, Mail, MapPin, Menu, X, Facebook, Instagram, Twitter } from 'lucide-react';
+import { Phone, Mail, MapPin, Menu, X, Facebook, Instagram, Twitter, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { FaWhatsapp } from 'react-icons/fa';
 
+function getGoogTransCookie() {
+  const match = document.cookie.match(/(^| )googtrans=([^;]+)/);
+  return match ? decodeURIComponent(match[2]) : null;
+}
+
+function switchToEnglish() {
+  document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/';
+  document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=' + window.location.hostname;
+  window.location.reload();
+}
+
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isTranslated, setIsTranslated] = useState(false);
   const [location] = useLocation();
+
+  useEffect(() => {
+    const cookie = getGoogTransCookie();
+    const translated = !!cookie && cookie !== '/en/en' && cookie !== '/auto/en';
+    setIsTranslated(translated);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -46,7 +64,17 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <span>info@nexttripprayagraj.com</span>
             </a>
           </div>
-          <div className="flex items-center gap-4"></div>
+          <div className="flex items-center gap-4">
+            {isTranslated && (
+              <button
+                onClick={switchToEnglish}
+                className="flex items-center gap-1.5 text-xs text-white/90 hover:text-white border border-white/30 hover:border-white/70 rounded-full px-3 py-1 transition-all"
+              >
+                <Globe size={12} />
+                <span>View in English</span>
+              </button>
+            )}
+          </div>
         </div>
       </div>
 
@@ -108,6 +136,15 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         {mobileMenuOpen && (
           <div className="md:hidden absolute top-full left-0 w-full bg-background border-b border-border shadow-lg animate-in slide-in-from-top-2">
             <div className="container mx-auto px-4 py-6 flex flex-col gap-4">
+              {isTranslated && (
+                <button
+                  onClick={switchToEnglish}
+                  className="flex items-center gap-2 text-sm font-medium text-primary border border-primary/30 hover:border-primary rounded-full px-4 py-2 w-fit transition-all"
+                >
+                  <Globe size={14} />
+                  <span>View in English</span>
+                </button>
+              )}
               {navLinks.map((link) => (
                 <Link 
                   key={link.name}
