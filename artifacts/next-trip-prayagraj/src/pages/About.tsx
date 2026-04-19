@@ -43,6 +43,25 @@ export default function About() {
         title="About Us — Next Trip Prayagraj"
         description="Learn about Next Trip Prayagraj — a Prayagraj-based tours and stays agency serving yatris, pilgrims, and tourists with sacred stays, yatra planning, and sattvik meals."
         url="https://nexttripprayagraj.com/about"
+        keywords="about Next Trip Prayagraj, Prayagraj tour agency, pilgrimage travel agency India, sacred stays Allahabad, yatra planning company, sattvik meals provider Prayagraj, Kumbh Mela agency"
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Next Trip Prayagraj",
+          "url": "https://nexttripprayagraj.com",
+          "logo": "https://nexttripprayagraj.com/favicon.svg",
+          "description": "Prayagraj-based tours and stays agency for yatris, pilgrims, and tourists.",
+          "foundingLocation": {
+            "@type": "Place",
+            "name": "Prayagraj, Uttar Pradesh, India"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+91-9999999999",
+            "contactType": "customer service",
+            "availableLanguage": ["English", "Hindi"]
+          }
+        }}
       />
 
       {/* Hero */}

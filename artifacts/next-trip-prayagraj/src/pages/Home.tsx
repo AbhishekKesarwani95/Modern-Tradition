@@ -95,6 +95,19 @@ export default function Home() {
         title="Sacred Stays & Yatra Planning in Prayagraj"
         description="Next Trip Prayagraj — premium sacred stays, Triveni Sangam yatra, Kumbh Mela 2026 packages, sattvik meals, and expert pilgrimage planning in Prayagraj (Allahabad)."
         url="https://nexttripprayagraj.com"
+        keywords="Prayagraj tours, Triveni Sangam yatra, Kumbh Mela 2026 packages, sacred stays Prayagraj, sattvik meals, pilgrimage Prayagraj, Allahabad tourism, yatra planning, Sangam boat ride"
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Next Trip Prayagraj",
+          "url": "https://nexttripprayagraj.com",
+          "description": "Premium sacred stays, Triveni Sangam yatra, Kumbh Mela 2026 packages, and sattvik meals in Prayagraj.",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://nexttripprayagraj.com/packages",
+            "query-input": "required name=search_term_string"
+          }
+        }}
       />
 
       {/* HERO CAROUSEL */}

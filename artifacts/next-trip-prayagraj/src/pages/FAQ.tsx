@@ -89,6 +89,19 @@ export default function FAQ() {
         title="Frequently Asked Questions — Next Trip Prayagraj"
         description="Find answers to common questions about visiting Prayagraj — Triveni Sangam, Kumbh Mela 2026 packages, sattvik meals, sacred stays, puja arrangements, and more."
         url="https://nexttripprayagraj.com/faq"
+        keywords="Prayagraj FAQ, Triveni Sangam questions, Kumbh Mela 2026 information, sattvik food Prayagraj, pilgrimage travel tips, sacred stays questions, yatra planning guide"
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": faqs.map(faq => ({
+            "@type": "Question",
+            "name": faq.question,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": faq.answer
+            }
+          }))
+        }}
       />
 
       {/* Hero */}

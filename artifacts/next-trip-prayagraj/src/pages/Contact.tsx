@@ -89,6 +89,28 @@ export default function Contact() {
         title="Contact & Enquiry — Next Trip Prayagraj"
         description="Get in touch with Next Trip Prayagraj to plan your sacred yatra. WhatsApp us for package bookings, custom itineraries, and Kumbh Mela 2026 reservations."
         url="https://nexttripprayagraj.com/contact"
+        keywords="contact Next Trip Prayagraj, book yatra package, Kumbh Mela 2026 booking, WhatsApp pilgrimage enquiry, custom Prayagraj tour, pilgrimage booking India"
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "ContactPage",
+          "name": "Contact Next Trip Prayagraj",
+          "url": "https://nexttripprayagraj.com/contact",
+          "description": "Contact us to plan your sacred yatra, book packages, or enquire about Kumbh Mela 2026.",
+          "mainEntity": {
+            "@type": "LocalBusiness",
+            "name": "Next Trip Prayagraj",
+            "telephone": "+91-9999999999",
+            "email": "info@nexttripprayagraj.com",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Near Triveni Sangam",
+              "addressLocality": "Prayagraj",
+              "addressRegion": "Uttar Pradesh",
+              "postalCode": "211001",
+              "addressCountry": "IN"
+            }
+          }
+        }}
       />
 
       {/* Hero */}

@@ -119,6 +119,30 @@ export default function Packages() {
         title="Travel Packages — Next Trip Prayagraj"
         description="Explore our curated travel packages for Prayagraj — Heritage & Spiritual tours, Kumbh Mela packages, Short Getaway, History & Food Trail, and Sacred Stay packages."
         url="https://nexttripprayagraj.com/packages"
+        keywords="Prayagraj travel packages, Kumbh Mela 2026 package, Triveni Sangam tour, heritage spiritual tour Prayagraj, sacred stays package, sattvik meals package, pilgrimage package India, yatra package Allahabad"
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          "name": "Prayagraj Travel Packages — Next Trip Prayagraj",
+          "url": "https://nexttripprayagraj.com/packages",
+          "itemListElement": packages.map((pkg, index) => ({
+            "@type": "ListItem",
+            "position": index + 1,
+            "item": {
+              "@type": "TouristTrip",
+              "name": pkg.name,
+              "description": pkg.description,
+              "url": "https://nexttripprayagraj.com/packages",
+              "image": `https://nexttripprayagraj.com${pkg.image}`,
+              "touristType": ["Pilgrims", "Religious Tourists"],
+              "provider": {
+                "@type": "TravelAgency",
+                "name": "Next Trip Prayagraj",
+                "url": "https://nexttripprayagraj.com"
+              }
+            }
+          }))
+        }}
       />
 
       {/* Hero */}
