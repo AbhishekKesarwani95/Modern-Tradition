@@ -52,6 +52,26 @@ const packages = [
   },
   {
     id: 3,
+    name: 'Accommodation + Food Package',
+    subtitle: 'Sacred Stays & Sattvik Meals — Designed for Your Yatra',
+    duration: 'Flexible',
+    tag: 'Pure Comfort',
+    image: '/images/sattvik-thali.png',
+    description:
+      'Handpicked stays with pure sattvik meals for the yatri who needs comfort and spiritual ambience.',
+    inclusions: [
+      'AC & non-AC stay options',
+      'Options near Sangam for early snan',
+      'Family rooms available',
+      'Local vegetarian thali',
+      '4 AM tea service',
+      'Pure-veg sattvik meals',
+      'Verified for cleanliness & safety',
+      'Spiritual atmosphere guaranteed',
+    ],
+  },
+  {
+    id: 4,
     name: 'Kumbh / Mela Special Package',
     subtitle: 'Mahakumbh Prayagraj: Once in a Lifetime',
     duration: 'Kumbh Mela',
@@ -71,7 +91,7 @@ const packages = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     name: 'History + Food Trail Package',
     subtitle: 'Allahabad: Freedom, Forts & Flavours',
     duration: '1N / 1D',
@@ -88,26 +108,6 @@ const packages = [
       'Chaat at Civil Lines',
       'Sweets at Sulaki',
       'AC hotel, AC cab & storyteller guide',
-    ],
-  },
-  {
-    id: 5,
-    name: 'Accommodation + Food Package',
-    subtitle: 'Sacred Stays & Sattvik Meals — Designed for Your Yatra',
-    duration: 'Flexible',
-    tag: 'Pure Comfort',
-    image: '/images/sattvik-thali.png',
-    description:
-      'Handpicked stays with pure sattvik meals for the yatri who needs comfort and spiritual ambience.',
-    inclusions: [
-      'AC & non-AC stay options',
-      'Options near Sangam for early snan',
-      'Family rooms available',
-      'Local vegetarian thali',
-      '4 AM tea service',
-      'Pure-veg sattvik meals',
-      'Verified for cleanliness & safety',
-      'Spiritual atmosphere guaranteed',
     ],
   },
 ];
