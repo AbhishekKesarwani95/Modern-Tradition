@@ -67,10 +67,10 @@ const quickPackages = [
     image: '/images/sacred-boat-ride.png',
   },
   {
-    name: 'Kumbh Special',
-    duration: 'Kumbh Mela',
-    highlight: 'Tented camp, Shahi Snan priority access',
-    image: '/images/kumbh-mela-diyas.png',
+    name: 'Accommodation + Food',
+    duration: 'Flexible',
+    highlight: 'Sacred stays, sattvik meals, near Sangam',
+    image: '/images/sattvik-thali.png',
   },
 ];
 
