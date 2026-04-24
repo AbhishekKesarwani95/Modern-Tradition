@@ -10,7 +10,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Phone, Mail, MapPin } from 'lucide-react';
 import { FaWhatsapp } from 'react-icons/fa';
 
-const WHATSAPP_NUMBER = '919999999999';
+const WHATSAPP_NUMBER = '917238072526';
 
 const contactSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
@@ -37,8 +37,8 @@ const contactInfo = [
   {
     icon: Phone,
     label: 'Phone / WhatsApp',
-    value: '+91-9999999999',
-    href: 'tel:+919999999999',
+    value: '+91-7238072526',
+    href: 'tel:+917238072526',
   },
   {
     icon: Mail,
@@ -99,7 +99,7 @@ export default function Contact() {
           "mainEntity": {
             "@type": "LocalBusiness",
             "name": "Next Trip Prayagraj",
-            "telephone": "+91-9999999999",
+            "telephone": "+91-7238072526",
             "email": "info@nexttripprayagraj.com",
             "address": {
               "@type": "PostalAddress",

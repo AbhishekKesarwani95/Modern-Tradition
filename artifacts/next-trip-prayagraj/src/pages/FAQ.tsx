@@ -2,7 +2,7 @@ import { SEO } from '@/components/SEO';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Button } from '@/components/ui/button';
 
-const WHATSAPP_NUMBER = '919999999999';
+const WHATSAPP_NUMBER = '917238072526';
 
 const faqs = [
   {
@@ -43,7 +43,7 @@ const faqs = [
   {
     question: 'How do I book a package?',
     answer:
-      'The simplest way to book is via WhatsApp — click any "Book This" button on our Packages page or reach us directly at +91-9999999999. You can also fill our Contact/Enquiry form and we will get back to you within 2-3 hours. For customized packages, a brief call or chat is usually all we need.',
+      'The simplest way to book is via WhatsApp — click any "Book This" button on our Packages page or reach us directly at +91-7238072526. You can also fill our Contact/Enquiry form and we will get back to you within 2-3 hours. For customized packages, a brief call or chat is usually all we need.',
   },
   {
     question: 'Do you offer NRI packages?',

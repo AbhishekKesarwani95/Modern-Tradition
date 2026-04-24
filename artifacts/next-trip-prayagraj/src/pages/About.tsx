@@ -57,7 +57,7 @@ export default function About() {
           },
           "contactPoint": {
             "@type": "ContactPoint",
-            "telephone": "+91-9999999999",
+            "telephone": "+91-7238072526",
             "contactType": "customer service",
             "availableLanguage": ["English", "Hindi"]
           }

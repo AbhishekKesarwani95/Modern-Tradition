@@ -6,7 +6,7 @@ import { ArrowRight, ArrowLeft, MapPin, Clock, Star, Shield, Users, Utensils, Be
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 
-const WHATSAPP_NUMBER = '919999999999';
+const WHATSAPP_NUMBER = '917238072526';
 
 const HERO_IMAGES = [
   { src: '/images/triveni-sangam-dawn.png', alt: 'Triveni Sangam at dawn — sacred confluence of three holy rivers' },

@@ -2,7 +2,7 @@ import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Clock, MapPin, Check } from 'lucide-react';
 
-const WHATSAPP_NUMBER = '919999999999';
+const WHATSAPP_NUMBER = '917238072526';
 
 function waLink(packageName: string) {
   const text = encodeURIComponent(`Hello! I am interested in the ${packageName}. Please share more details.`);

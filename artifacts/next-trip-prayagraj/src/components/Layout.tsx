@@ -79,9 +79,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <div className="bg-primary text-primary-foreground py-2 px-4 text-sm font-medium hidden md:block">
         <div className="container mx-auto flex justify-between items-center">
           <div className="flex items-center gap-6">
-            <a href="tel:+919999999999" className="flex items-center gap-2 hover:text-white/80 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white rounded-sm">
+            <a href="tel:+917238072526" className="flex items-center gap-2 hover:text-white/80 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white rounded-sm">
               <Phone size={14} />
-              <span>+91-9999999999</span>
+              <span>+91-7238072526</span>
             </a>
             <a href="mailto:info@nexttripprayagraj.com" className="flex items-center gap-2 hover:text-white/80 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white rounded-sm">
               <Mail size={14} />
@@ -155,7 +155,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               ))}
             </ul>
             <Button asChild className="rounded-full shadow-md hover:shadow-lg transition-all" size="sm">
-              <a href="https://wa.me/919999999999?text=I am interested in booking a package" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/917238072526?text=I am interested in booking a package" target="_blank" rel="noopener noreferrer">
                 Book Now
               </a>
             </Button>
@@ -210,7 +210,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 </Link>
               ))}
               <Button asChild className="w-full mt-4" size="lg">
-                <a href="https://wa.me/919999999999?text=I am interested in booking a package" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/917238072526?text=I am interested in booking a package" target="_blank" rel="noopener noreferrer">
                   Book Now
                 </a>
               </Button>
@@ -292,7 +292,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 </li>
                 <li className="flex items-center gap-3 text-sm text-muted">
                   <Phone className="text-primary shrink-0" size={18} />
-                  <a href="tel:+919999999999" className="hover:text-primary transition-colors">+91-9999999999</a>
+                  <a href="tel:+917238072526" className="hover:text-primary transition-colors">+91-7238072526</a>
                 </li>
                 <li className="flex items-center gap-3 text-sm text-muted">
                   <Mail className="text-primary shrink-0" size={18} />
@@ -310,7 +310,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
       {/* Floating WhatsApp Button */}
       <a 
-        href="https://wa.me/919999999999" 
+        href="https://wa.me/917238072526" 
         target="_blank" 
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all z-50 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#25D366]/50"
