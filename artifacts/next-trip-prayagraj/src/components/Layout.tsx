@@ -162,7 +162,31 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </nav>
 
           {/* Mobile Menu Toggle */}
-          <div className="flex items-center gap-4 md:hidden">
+          <div className="flex items-center gap-2 md:hidden">
+            {isTranslated ? (
+              <button
+                onClick={() => {
+                  localStorage.setItem('ntp_lang_pref', 'en');
+                  document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/';
+                  document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=' + window.location.hostname;
+                  window.location.reload();
+                }}
+                className="flex items-center gap-1 text-xs font-medium text-primary border border-primary/40 hover:border-primary rounded-full px-2.5 py-1.5 transition-all"
+                aria-label="View in English"
+              >
+                <Globe size={12} />
+                <span>English</span>
+              </button>
+            ) : localLang ? (
+              <button
+                onClick={() => { localStorage.removeItem('ntp_lang_pref'); setGoogTransCookie(localLang.code); window.location.reload(); }}
+                className="flex items-center gap-1 text-xs font-medium text-primary border border-primary/40 hover:border-primary rounded-full px-2.5 py-1.5 transition-all"
+                aria-label={`View in ${localLang.name}`}
+              >
+                <Globe size={12} />
+                <span className="max-w-[90px] truncate">{localLang.name}</span>
+              </button>
+            ) : null}
             <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-label="Toggle Menu">
               {mobileMenuOpen ? <X /> : <Menu />}
             </Button>
@@ -173,28 +197,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         {mobileMenuOpen && (
           <div className="md:hidden absolute top-full left-0 w-full bg-background border-b border-border shadow-lg animate-in slide-in-from-top-2">
             <div className="container mx-auto px-4 py-6 flex flex-col gap-4">
-              {isTranslated ? (
-                <button
-                  onClick={() => {
-                    localStorage.setItem('ntp_lang_pref', 'en');
-                    document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/';
-                    document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=' + window.location.hostname;
-                    window.location.reload();
-                  }}
-                  className="flex items-center gap-2 text-sm font-medium text-primary border border-primary/30 hover:border-primary rounded-full px-4 py-2 w-fit transition-all"
-                >
-                  <Globe size={14} />
-                  <span>View in English</span>
-                </button>
-              ) : localLang ? (
-                <button
-                  onClick={() => { localStorage.removeItem('ntp_lang_pref'); setGoogTransCookie(localLang.code); window.location.reload(); }}
-                  className="flex items-center gap-2 text-sm font-medium text-primary border border-primary/30 hover:border-primary rounded-full px-4 py-2 w-fit transition-all"
-                >
-                  <Globe size={14} />
-                  <span>{localLang.name}</span>
-                </button>
-              ) : null}
               {navLinks.map((link) => (
                 <Link 
                   key={link.name}
