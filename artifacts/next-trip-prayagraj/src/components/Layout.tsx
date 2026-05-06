@@ -22,10 +22,35 @@ function getBrowserLang(): string | null {
     const code = l.toLowerCase().split('-')[0];
     if (code && code !== 'en') return code;
   }
+
+  const localeTags = [navigator.language, ...(navigator.languages || [])].filter(Boolean).map((l) => l.toLowerCase());
+  for (const tag of localeTags) {
+    if (tag.includes('-in') || tag.includes('india')) return 'hi';
+  }
+
   return null;
 }
 
 function getLangNativeName(code: string): string {
+  const nativeNames: Record<string, string> = {
+    hi: 'हिन्दी',
+    bn: 'বাংলা',
+    mr: 'मराठी',
+    gu: 'ગુજરાતી',
+    pa: 'ਪੰਜਾਬੀ',
+    ta: 'தமிழ்',
+    te: 'తెలుగు',
+    kn: 'ಕನ್ನಡ',
+    ml: 'മലയാളം',
+    or: 'ଓଡ଼ିଆ',
+    as: 'অসমীয়া',
+    ur: 'اردو',
+  };
+
+  if (nativeNames[code]) {
+    return nativeNames[code];
+  }
+
   try {
     const display = new Intl.DisplayNames([code], { type: 'language' });
     const name = display.of(code);
@@ -76,9 +101,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen flex flex-col bg-background selection:bg-primary/20">
       {/* Top Announcement Bar */}
-      <div className="bg-primary text-primary-foreground py-2 px-4 text-sm font-medium hidden md:block">
-        <div className="container mx-auto flex justify-between items-center">
-          <div className="flex items-center gap-6">
+      <div className="bg-primary text-primary-foreground py-2 px-4 text-sm font-medium">
+        <div className="container mx-auto flex flex-col lg:flex-row justify-between items-center gap-3">
+          <div className="flex flex-wrap items-center gap-4 justify-center lg:justify-start">
             <a href="tel:+917238072526" className="flex items-center gap-2 hover:text-white/80 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white rounded-sm">
               <Phone size={14} />
               <span>+91-7238072526</span>
